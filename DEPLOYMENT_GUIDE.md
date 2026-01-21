@@ -40,7 +40,7 @@ git push origin main
 3. Найдите и выберите репозиторий `molekularni-studio`
 4. Настройки:
    - **Framework Preset:** Next.js
-   - **Root Directory:** `./` (оставьте пустым)
+   - **Root Directory:** `nextjs_space` ⚠️ **ВАЖНО!**
    - **Environment Variables:** ✅ **Не нужны!**
 5. Нажмите **"Deploy"**
 
@@ -98,7 +98,7 @@ git push origin main
 3. Najděte a vyberte `molekularni-studio`
 4. Nastavení:
    - **Framework Preset:** Next.js
-   - **Root Directory:** `./` (nechat prázdné)
+   - **Root Directory:** `nextjs_space` ⚠️ **DŮLEŽITÉ!**
    - **Environment Variables:** ✅ **Nejsou potřeba!**
 5. Klikněte **"Deploy"**
 
