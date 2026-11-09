@@ -1,102 +1,74 @@
-# Molekulární Studio 🧪
+# Molecular Studio: 3D molecule visualizer with PubChem data
 
-**3D vizualizér chemických molekul s daty z PubChem**
+[Česky](README.cs.md)
 
----
+An interactive 3D viewer for chemical molecules. Type an English molecule
+name, the app fetches structural data from the public PubChem database
+(NIH/NCBI) and renders a ball-and-stick model with CPK element coloring.
+No API key, no database and no accounts are required.
 
-## 🇷🇺 Русский
+## Run
 
-### Описание
+Verified against the scripts in `package.json`; the installation was not
+executed end-to-end in this documentation pass.
 
-Interaktivný 3D vizualizér molekul, který využívá veřejnou databázi PubChem (NIH/NCBI) pro získávání strukturních dat molekul. Žádný API klíč není potřeba!
+1. Clone the repository and open it in a terminal.
+2. `npm install` (or `yarn install`)
+3. `npm run dev` and open `http://localhost:3000`
 
-### Funkce
+Requires Node.js for Next.js 14. Production: `npm run build` and
+`npm start`. No environment variables are needed; the bundled Prisma schema
+is unused (`lib/db.ts` exports a null client, the app reads PubChem only).
 
-- 🔍 **Vyhledávání molekul** - zadejte název v angličtině
-- 🌐 **3D vizualizace** - interaktivní rotace a zoom
-- 🎨 **CPK barvy** - standardní barevné schéma prvků
-- ⛓️ **Chemické vazby** - jednoduché, dvojné, trojné
-- 📊 **Informace** - vzorec, hmotnost, počet atomů
-- 🆓 **Zdarma** - bez API klíče, bez omezení
+## Features
 
-### Spuštění lokálně
+- Search by English molecule name (for example Caffeine, Aspirin, Ethanol);
+  queries go through the app's own API route to PubChem
+- Interactive 3D scene with rotation and zoom, built with Three.js
+- CPK element coloring and single, double and triple bonds
+- Molecule information: formula, mass and atom count
+- No API key, no database, no telemetry
 
-```bash
-# Klonovъní repozitáře
-git clone https://github.com/YOUR_USERNAME/molekularni-studio.git
-cd molekularni-studio
+## What it is not
 
-# Instalace závislostí
-yarn install
+Not a molecule editor and not a computational chemistry tool: no
+measurements, no force fields, no molecular dynamics. The model is limited
+to the structural data PubChem returns for a given compound. The interface
+is Czech only; molecule names must be entered in English because PubChem
+search expects English nomenclature.
 
-# Spuštění vývojového serveru
-yarn dev
-```
+## Languages
 
-Aplikace bude dostupná na `http://localhost:3000`
+The application interface is Czech. This README exists in English (this
+file) and Czech ([README.cs.md](README.cs.md)); both editions carry the
+same facts.
 
-### Technologie
+## Data and privacy
 
-- **Next.js 14** - React framework
-- **Three.js** - 3D grafika
-- **TypeScript** - typová bezpečnost
-- **Tailwind CSS** - stylování
-- **PubChem API** - zdroj molekulárních dat
+Search queries are sent from the app's own API route to the public PubChem
+REST service. There is no database, no account system, no analytics and no
+cookies. A self-hosted copy sends its queries from your server to PubChem.
 
----
+## Files
 
-## 🇨🇿 Čeština
+| Path | Purpose |
+|---|---|
+| `app/page.tsx` | Page state and layout |
+| `app/api/molecule/route.ts` | Server route fetching PubChem data |
+| `components/three-scene.tsx`, `components/molecule-viewer.tsx` | 3D rendering |
+| `components/ui-overlay.tsx` | Search interface |
+| `lib/constants.ts` | CPK colors and constants |
 
-### Popis
+## Documentation
 
-Interaktivní 3D vizualizér molekul využívající veřejnou databázi PubChem (NIH/NCBI). Není potřeba žádný API klíč!
+- [Deployment guide](DEPLOYMENT_GUIDE.md) (Vercel and alternatives)
 
-### Vlastnosti
+## License and author
 
-- 🔍 **Vyhledávání** - názvy molekul v angličtině
-- 🌐 **3D zobrazení** - interaktivní ovládání myší
-- 🎨 **CPK barvy** - standardní chemické barvy
-- ⛓️ **Vazby** - všechny typy chemických vazeb
-- 📊 **Metadata** - vzorec, hmotnost, zdroj
-- 🆓 **Bezplatně** - žádné poplatky, žádná registrace
+MIT, copyright © 2026 Luděk Sušický. See [LICENSE](LICENSE).
 
-### Použití
+Luděk Sušický: biologist, secondary-school and university teacher of
+computing subjects · [@siberius on GitHub](https://github.com/siberius) —
+more educational projects and open-source applications
 
-1. Otevřete aplikaci v prohlížeči
-2. Zadejte název molekuly v angličtině (např. "Caffeine", "Aspirin", "Ethanol")
-3. Klikněte na "Vizualizovat"
-4. Použijte myš pro rotaci a kolečko pro přiblížení
-
-### Příklady molekul
-
-- `Caffeine` - kofein
-- `Aspirin` - kyselina acetylsalicylová
-- `Ethanol` - etanol (alkohol)
-- `Glucose` - glukóza
-- `Dopamine` - dopamin
-- `Serotonin` - serotonin
-- `Cholesterol` - cholesterol
-- `Testosterone` - testosteron
-
----
-
-## 🚀 Deploy
-
-Viz [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) pro podrobné instrukce.
-
-**Rychlý deploy na Vercel:**
-1. Fork tento repozitář
-2. Propojte s Vercel
-3. Deploy! (žádné environment variables nejsou potřeba)
-
----
-
-## 📄 Licence
-
-MIT License - volné použití
-
-## 🙏 Poděkování
-
-- [PubChem](https://pubchem.ncbi.nlm.nih.gov/) - NIH/NCBI za veřejnou databázi molekul
-- [Three.js](https://threejs.org/) - 3D grafická knihovna
-- [Next.js](https://nextjs.org/) - React framework
+[GitHub repository](https://github.com/siberius/molekularni-studio)
