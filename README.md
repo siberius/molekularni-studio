@@ -2,6 +2,11 @@
 
 [Česky](README.cs.md)
 
+> Online version / Live 3D web app: [https://school.vibemaker.cz/spa/molekuly.html](https://school.vibemaker.cz/spa/molekuly.html)  
+> *(Run directly in your browser · No installation · No API key required)*
+
+[![Molecular Studio — 3D molecule visualizer](docs/molekuly.gif)](https://school.vibemaker.cz/spa/molekuly.html)
+
 An interactive 3D viewer for chemical molecules. Type an English molecule
 name, the app fetches structural data from the public PubChem database
 (NIH/NCBI) and renders a ball-and-stick model with CPK element coloring.
@@ -67,8 +72,15 @@ cookies. A self-hosted copy sends its queries from your server to PubChem.
 
 MIT, copyright © 2026 Luděk Sušický. See [LICENSE](LICENSE).
 
-Luděk Sušický: biologist, secondary-school and university teacher of
-computing subjects · [@siberius on GitHub](https://github.com/siberius) —
-more educational projects and open-source applications
+### Author
+
+**Luděk Sušický** — biologist, secondary-school and university teacher of computing subjects
+
+- E-mail: [ludek.susicky@gmail.com](mailto:ludek.susicky@gmail.com)
+- X: [@ludeksusicky](https://x.com/ludeksusicky)
+- LinkedIn: [Luděk Sušický](https://www.linkedin.com/in/ludek-susicky/)
+- GitHub: [@siberius](https://github.com/siberius) — more educational projects and open-source applications
+
+The app is an example of an SPA (Single Page Application) in a single HTML file / interactive 3D viewer.
 
 [GitHub repository](https://github.com/siberius/molekularni-studio)

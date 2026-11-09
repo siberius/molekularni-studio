@@ -2,6 +2,11 @@
 
 [English](README.md)
 
+> Online verze / Live 3D web app: [https://school.vibemaker.cz/spa/molekuly.html](https://school.vibemaker.cz/spa/molekuly.html)  
+> *(Spusťte přímo v prohlížeči · Bez instalace · Bez nutnosti API klíče)*
+
+[![Molekulární Studio — 3D vizualizér molekul](docs/molekuly.gif)](https://school.vibemaker.cz/spa/molekuly.html)
+
 Interaktivní 3D prohlížeč chemických molekul. Zadej anglický název molekuly,
 aplikace stáhne strukturní data z veřejné databáze PubChem (NIH/NCBI)
 a vykreslí model koule a tyče s CPK barvami prvků. Není potřeba API klíč,
@@ -68,8 +73,15 @@ Vlastní nasazení posílá dotazy ze svého serveru do PubChem.
 
 MIT, copyright © 2026 Luděk Sušický. Viz [LICENSE](LICENSE).
 
-Luděk Sušický: biolog, středoškolský a vysokoškolský učitel informatických
-předmětů · [@siberius na GitHubu](https://github.com/siberius) — další
-vzdělávací projekty a open-source aplikace
+### Autor
+
+**Luděk Sušický** — biolog, středoškolský a vysokoškolský učitel informatických předmětů
+
+- E-mail: [ludek.susicky@gmail.com](mailto:ludek.susicky@gmail.com)
+- X: [@ludeksusicky](https://x.com/ludeksusicky)
+- LinkedIn: [Luděk Sušický](https://www.linkedin.com/in/ludek-susicky/)
+- GitHub: [@siberius](https://github.com/siberius) — další vzdělávací projekty a otevřené aplikace
+
+Aplikace je příkladem interaktivního 3D výukového vizualizátoru v prohlížeči.
 
 [Repozitář na GitHubu](https://github.com/siberius/molekularni-studio)
