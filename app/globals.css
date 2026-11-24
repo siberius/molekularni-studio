@@ -1,9 +1,8 @@
 /* Globální styly pro Molekulární Studio */
 /* Základní Tailwind direktivy */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 /* Kořenové CSS proměnné */
 :root {
