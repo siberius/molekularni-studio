@@ -11,9 +11,17 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'] });
 // Force dynamic rendering pro správnou konfiguraci metadat
 export const dynamic = 'force-dynamic';
 
+// Veřejná adresa aplikace: explicitní URL, Vercel produkce, nebo localhost
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  process.env.NEXTAUTH_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'http://localhost:3000');
+
 // Metadata aplikace pro SEO a social sharing
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXTAUTH_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(siteUrl),
   title: 'Molekulární Studio | 3D Vizualizér Molekul',
   description: 'Interaktivní 3D vizualizér molekul s AI vyhledáváním. Prozkoumejte chemické struktury v moderním rozhraní.',
   keywords: ['molekuly', '3D', 'vizualizace', 'chemie', 'AI', 'věda'],
